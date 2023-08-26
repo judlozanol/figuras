@@ -31,5 +31,10 @@ class Rectangulo(Figura):
         interseccion = Punto(self.origen.x,self.fin.y)
         self.perimetro = ((self.origen.calcular_distancia(interseccion)*2)+(interseccion.calcular_distancia(self.fin)*2))
 class Circulo(Figura):
-    pass
+    def calcular_area(self):
+        radio = self.origen.calcular_distancia(self.fin)
+        self.area= (pi*(radio**2))
+    def calcular_perimetro(self):
+        radio = self.origen.calcular_distancia(self.fin)
+        self.perimetro = (2*pi*radio)
     
